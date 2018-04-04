@@ -1,0 +1,29 @@
+//
+//  Release.xcconfig
+//  MeetUpArchitecture
+//
+//  Created by 123 on 29.03.2018.
+//  Copyright © 2018 123. All rights reserved.
+//
+
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "Alamofire"
+OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
+
+IS_APP_NAME = MeetUp
+IS_APP_VERSION = 0.1
+IS_APP_BUNDLE_ID = com.kanat.MeetUpRelease
+IS_APP_ICON = AppIconRelease
+
+
+BACKEND_URL = http:\/\/api.intensifystudio.com/
+CONSUMER_KEY = ck_a57e4fa2e14c12f400371cf2951ec3dea5
+CONSUMER_SECRET = cs_c847caa35ce1041e9c69d239141f1f63bb22b
